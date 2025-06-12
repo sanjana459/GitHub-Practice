@@ -547,7 +547,9 @@ Think of `git stash` like a temporary bag where you can keep your current work s
 
 Here I created a branch called `bug`, made changes to `footer.html`, but did not stage it. I tried moving to another branch expecting an error so I can stash it — Git didn’t throw an error but told me the file was modified.
 
-<img src="https://github.com/user-attachments/assets/your_path/63bd2df2-47fd-40f5-a5a5-695462b5aa88.png" width="800" />
+<p align="center">
+  <img width="541" alt="s to branddy Pos-MacBook-Pro gittwo   git" src="https://github.com/user-attachments/assets/c7329c4f-be08-48ed-be49-36c84f4c0b47" />
+</p>
 
 Git allows you to switch branches with uncommitted changes only if:
 > The file you changed (`footer.html`) exists in both branches and doesn't conflict between them.
@@ -556,25 +558,37 @@ Git allows you to switch branches with uncommitted changes only if:
 
 Here I made changes to the footer and committed it. I switched to the bug branch, made changes again, but didn't commit. When I tried to go back to footer, Git threw an error because there would be a conflict.
 
-<img src="https://github.com/user-attachments/assets/your_path/6fd50766-39da-4a66-ab64-12c388521429.png" width="800" />
+<p align="center">
+  <img width="624" alt="• (base) sanjanareddyes MacBook-Pro gitto   git comit -m nake changes to footer" src="https://github.com/user-attachments/assets/04cc09f5-74d8-407e-973d-ac933ee4c73b" />
+</p>
+
 
 ---
 
 Now I stashed the changes in the bug branch.
 
-<img src="https://github.com/user-attachments/assets/your_path/7bf5d2c1-0b0d-4253-955c-cea13e8c9183.png" width="800" />
+<p align="center">
+  <img width="704" alt="ebrorl Yaur loceddranges to ke fogtorin fites cheskoute ovenvritten by checkout" src="https://github.com/user-attachments/assets/7695da90-9705-4e4f-8abf-69ddf50e2d91" />
+</p>
+
+
 
 ---
 
 Here I moved back to the bug branch and popped the stash. My changes were restored to the file.
 
-<img src="https://github.com/user-attachments/assets/your_path/ba3e1f89-3360-4151-9e6b-eaa6ab96533e.png" width="800" />
+<p align="center">
+  <img width="527" alt="• (base) sanjanareddy@Gs-MacBook-Pro gittwo   git checkout bug" src="https://github.com/user-attachments/assets/af975cbf-a4b5-45ef-aa90-395b7eea5092" />
+</p>
+
 
 ---
 
 After finishing the work, I merged all the branches into `master` and the working tree is clean.
 
-<img src="https://github.com/user-attachments/assets/your_path/c24368f7-c1db-48a0-9425-9bea6b24e81b.png" width="800" />
+<p align="center">
+  <img width="589" alt="not restore stater  to discard changes in working directory)" src="https://github.com/user-attachments/assets/1d972c85-c7ca-44b2-92d5-78b1c6b65a91" />
+</p>
 
 ---
 
@@ -586,7 +600,9 @@ Git allows listing the stash with:
 git stash list
 ```
 
-<img src="https://github.com/user-attachments/assets/your_path/d0567dc1-cdb8-4a6d-84a1-11c17d71620a.png" width="800" />
+<p align="center">
+  <img width="659" alt="(base)" src="https://github.com/user-attachments/assets/6d2eb824-8b75-4e83-bf34-f18ed90733a8" />
+</p>
 
 ---
 
@@ -594,12 +610,15 @@ git stash list
 
 ### Git Checkout
 
-<img src="https://github.com/user-attachments/assets/your_path/fe81e3a4-b2cb-4ddf-ac31-f8877348698e.png" width="800" />
+<p align="center">
+  <img width="603" alt="Inex ach foste to footer" src="https://github.com/user-attachments/assets/f3e79018-1a97-4c7a-9081-f61841f8b29f" />
+</p>
 
 ---
 
 ### Git Reflog
 
-<img src="https://github.com/user-attachments/assets/your_path/14Pw3ZPfNHngGzgRaCFUjM.png" width="800" />
-
+<p align="center">
+  <img width="802" alt="Pasted Graphic 51" src="https://github.com/user-attachments/assets/eba054bb-7244-4f1e-bd40-a181f066c7c8" />
+</p>
 
