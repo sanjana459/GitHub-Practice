@@ -410,7 +410,7 @@ git merge nav-bar
 ```
 
 <p align="center">
-  <img width="700" alt="merging nav-bar into master" src="https://github.com/user-attachments/assets/file-8aCQJBZyZY59GeMavwgEuD" />
+ <img width="569" alt="• (base) sanjanareddy@Gs-MacBook-Pro gittwo   git checkout master" src="https://github.com/user-attachments/assets/3e04f5f6-d3cc-4e2a-81cf-4fcbe426f72f" />
 </p>
 
 The `++++++++++++` in green means only new lines were added — no deletions. Merge was successful!
@@ -428,7 +428,7 @@ git branch -d nav-bar
 We can see the merge in Git Graph clearly now:
 
 <p align="center">
-  <img width="700" alt="graph after navbar merged" src="https://github.com/user-attachments/assets/file-9s9SEPUJhYU7VdQrBQXUZ1" />
+  <img width="895" alt="Pasted Graphic 31" src="https://github.com/user-attachments/assets/94c6b2da-4167-47a4-a090-971febe3206a" />
 </p>
 
 ---
@@ -438,7 +438,7 @@ We can see the merge in Git Graph clearly now:
 I created a new branch called `footer`, made some edits, and merged that too.
 
 <p align="center">
-  <img width="700" alt="graph after footer merged" src="https://github.com/user-attachments/assets/file-MrTVdZzHZvUfcfkqRoLUXu" />
+  <img width="893" alt="Pasted Graphic 34" src="https://github.com/user-attachments/assets/c5f29bea-3cbb-4373-b883-bda8686a7277" />
 </p>
 
 ---
@@ -455,7 +455,8 @@ git checkout footer
 ```
 
 <p align="center">
-  <img width="700" alt="commits from both branches" src="https://github.com/user-attachments/assets/file-FixbrBaH4eJ9sBZMEvJvYv" />
+  <img width="769" alt="Pasted Graphic 35" src="https://github.com/user-attachments/assets/ff9963ee-819c-48f3-8882-9d1a48823f3f" />
+
 </p>
 
 Then when I tried to merge `footer` into `master`, Git threw a **merge conflict**:
@@ -465,7 +466,8 @@ git merge footer
 ```
 
 <p align="center">
-  <img width="700" alt="merge conflict shown" src="https://github.com/user-attachments/assets/file-Rk2K7f9DRD4nxbe9Qeb8Cs" />
+  <img width="510" alt="(base) sanjanareddy@Gs-MacBook-Pro gittwo   git merge footer" src="https://github.com/user-attachments/assets/ae6c1043-1122-4118-b02f-94ac13191928" />
+
 </p>
 
 ---
@@ -475,7 +477,8 @@ git merge footer
 Here’s what the conflict looked like inside VS Code:
 
 <p align="center">
-  <img width="700" alt="conflict markers inside file" src="https://github.com/user-attachments/assets/file-1B5xRFYSQVQugMBsetYhit" />
+  <img width="893" alt="Pasted Graphic 36" src="https://github.com/user-attachments/assets/667957d4-fdf8-45d1-8ba3-9015c40823ef" />
+
 </p>
 
 After editing and resolving the conflict manually, Git asked for a commit to finish the merge.
@@ -487,7 +490,8 @@ After editing and resolving the conflict manually, Git asked for a commit to fin
 Now we can see the new merge commit in Git Graph.
 
 <p align="center">
-  <img width="700" alt="graph showing resolved merge" src="https://github.com/user-attachments/assets/file-N4RUEutHkZk5VZtnAHwV22" />
+  <img width="893" alt="Pasted Graphic 38" src="https://github.com/user-attachments/assets/701adf63-3dec-47a0-8947-f4648ebcd2f2" />
+
 </p>
 
 ---
@@ -505,13 +509,15 @@ This compares:
 - `b/file.html` (new version)
 
 <p align="center">
-  <img width="700" alt="diff in index.html" src="https://github.com/user-attachments/assets/file-JCF71fNgPy6HT84KUMoWuA" />
+  <img width="467" alt="(base) sanjanareddy@Gs-MacBook-Pro gittwo   git add" src="https://github.com/user-attachments/assets/dd332025-5313-421b-9629-7938fcc86abf" />
+
 </p>
 
 I also used it on `footer.html` to see specific edits:
 
 <p align="center">
-  <img width="700" alt="diff in footer.html" src="https://github.com/user-attachments/assets/file-MtTPLMpQSPC1Dwu8pbP6X8" />
+  <img width="587" alt=" Btoster  htal" src="https://github.com/user-attachments/assets/0d86cb4a-05ae-4c82-94ed-b97259334ed0" />
+
 </p>
 
 ---
@@ -528,7 +534,7 @@ git diff <commit1> <commit2>
 This let me check what exactly changed between two points in time.
 
 <p align="center">
-  <img width="700" alt="git log and diff between commits" src="https://github.com/user-attachments/assets/file-8o3ZCSLcLUmiQCpE5EYLRt" />
+  <img width="579" alt="(footer) update index file with footer code" src="https://github.com/user-attachments/assets/ab1906a0-1463-4c0d-99a1-fd5625abab02" />
 </p>
 
 
