@@ -400,5 +400,136 @@ But `switch` is newer and more readable.
 
 ---
 
+## 🔀 Git Merge
+
+I switched back to the `master` branch and merged the `nav-bar` branch:
+
+```bash
+git checkout master
+git merge nav-bar
+```
+
+<p align="center">
+  <img width="700" alt="merging nav-bar into master" src="https://github.com/user-attachments/assets/file-8aCQJBZyZY59GeMavwgEuD" />
+</p>
+
+The `++++++++++++` in green means only new lines were added — no deletions. Merge was successful!
+
+Later, I deleted the `nav-bar` branch since it was already merged:
+
+```bash
+git branch -d nav-bar
+```
+
+---
+
+## 🧠 Git Graph View After Merge
+
+We can see the merge in Git Graph clearly now:
+
+<p align="center">
+  <img width="700" alt="graph after navbar merged" src="https://github.com/user-attachments/assets/file-9s9SEPUJhYU7VdQrBQXUZ1" />
+</p>
+
+---
+
+## 🔁 Practicing Again with `footer` Branch
+
+I created a new branch called `footer`, made some edits, and merged that too.
+
+<p align="center">
+  <img width="700" alt="graph after footer merged" src="https://github.com/user-attachments/assets/file-MrTVdZzHZvUfcfkqRoLUXu" />
+</p>
+
+---
+
+## ⚔️ Git Conflict (Content Conflict)
+
+I edited the same file (`index.html`) from both `master` and `footer` branches.
+
+```bash
+git checkout master
+# made changes and committed
+git checkout footer
+# made other changes and committed
+```
+
+<p align="center">
+  <img width="700" alt="commits from both branches" src="https://github.com/user-attachments/assets/file-FixbrBaH4eJ9sBZMEvJvYv" />
+</p>
+
+Then when I tried to merge `footer` into `master`, Git threw a **merge conflict**:
+
+```bash
+git merge footer
+```
+
+<p align="center">
+  <img width="700" alt="merge conflict shown" src="https://github.com/user-attachments/assets/file-Rk2K7f9DRD4nxbe9Qeb8Cs" />
+</p>
+
+---
+
+## 🧩 Resolving Merge Conflicts
+
+Here’s what the conflict looked like inside VS Code:
+
+<p align="center">
+  <img width="700" alt="conflict markers inside file" src="https://github.com/user-attachments/assets/file-1B5xRFYSQVQugMBsetYhit" />
+</p>
+
+After editing and resolving the conflict manually, Git asked for a commit to finish the merge.
+
+---
+
+## ✅ Git Graph After Conflict Resolution
+
+Now we can see the new merge commit in Git Graph.
+
+<p align="center">
+  <img width="700" alt="graph showing resolved merge" src="https://github.com/user-attachments/assets/file-N4RUEutHkZk5VZtnAHwV22" />
+</p>
+
+---
+
+## 📊 Git Diff — Comparing File Changes
+
+The `git diff` command shows what changed in a file:
+
+```bash
+git diff --staged
+```
+
+This compares:
+- `a/file.html` (previous version)
+- `b/file.html` (new version)
+
+<p align="center">
+  <img width="700" alt="diff in index.html" src="https://github.com/user-attachments/assets/file-JCF71fNgPy6HT84KUMoWuA" />
+</p>
+
+I also used it on `footer.html` to see specific edits:
+
+<p align="center">
+  <img width="700" alt="diff in footer.html" src="https://github.com/user-attachments/assets/file-MtTPLMpQSPC1Dwu8pbP6X8" />
+</p>
+
+---
+
+## 🔍 Git Log + Specific Diff Between Commits
+
+To view diff between specific commits, I ran:
+
+```bash
+git log --oneline
+git diff <commit1> <commit2>
+```
+
+This let me check what exactly changed between two points in time.
+
+<p align="center">
+  <img width="700" alt="git log and diff between commits" src="https://github.com/user-attachments/assets/file-8o3ZCSLcLUmiQCpE5EYLRt" />
+</p>
+
 
 
