@@ -292,7 +292,7 @@ git checkout nav-bar
 ```
 
 <p align="center">
-  <img width="700" alt="creating and switching branches" src="https://github.com/user-attachments/assets/file-EZRoygRXRd6AAhzBsEBYb2" />
+  <img width="490" alt="sanjanareddy@Gs-MacBook-Pro gittwo   git branch nav-bar" src="https://github.com/user-attachments/assets/383d898b-b047-41e2-bff3-d2c08d5bff90" />
 </p>
 
 ---
@@ -302,7 +302,7 @@ git checkout nav-bar
 At this point, the `nav-bar` branch was created, but no changes were made to it yet.
 
 <p align="center">
-  <img width="700" alt="initial git graph after branch creation" src="https://github.com/user-attachments/assets/file-YS6saJShoBopYbZx2iQZRM" />
+  <img width="898" alt="Pasted Graphic 22" src="https://github.com/user-attachments/assets/10cd283e-a68d-4a26-a4d6-08549d1202d0" />
 </p>
 
 ---
@@ -320,7 +320,7 @@ git commit -m "add navbar to code base"
 ```
 
 <p align="center">
-  <img width="700" alt="navbar commit in nav-bar branch" src="https://github.com/user-attachments/assets/file-4zgkoCRLZS9cYACqXEvRY2" />
+  <img width="891" alt="Pasted Graphic 23" src="https://github.com/user-attachments/assets/504907be-12ce-430b-bf02-1f440bfb3bf8" />
 </p>
 
 ---
@@ -330,7 +330,7 @@ git commit -m "add navbar to code base"
 Now the graph shows that `nav-bar` has progressed beyond `master`.
 
 <p align="center">
-  <img width="700" alt="graph after navbar commit" src="https://github.com/user-attachments/assets/file-MSt73VuoiqYrAs8HKCvZRL" />
+  <img width="896" alt="Pasted Graphic 24" src="https://github.com/user-attachments/assets/c1b3c199-cac9-4e9e-8701-218940b84629" />
 </p>
 
 ---
@@ -354,7 +354,7 @@ git commit -m "add hero section to the code base"
 ```
 
 <p align="center">
-  <img width="700" alt="creating hero file and switching branches" src="https://github.com/user-attachments/assets/file-4aJ3Hex4BMV1gZUbDvxeQS" />
+  <img width="1190" alt="Pasted Graphic 27" src="https://github.com/user-attachments/assets/c1995e9d-90a7-464d-9511-ceca92acdeef" />
 </p>
 
 ---
@@ -365,7 +365,7 @@ Now `master` has its own new commit, and so does `nav-bar`.
 You can clearly see the diverged paths.
 
 <p align="center">
-  <img width="700" alt="diverged graph" src="https://github.com/user-attachments/assets/file-5N1Wqnrxkte4Mx64kXQPn4" />
+  <img width="896" alt="Pasted Graphic 28" src="https://github.com/user-attachments/assets/31e87235-c5db-4b46-a150-66caf8742139" />
 </p>
 
 ---
@@ -374,10 +374,6 @@ You can clearly see the diverged paths.
 
 When I’m on `master`, I see only `hero.html`.  
 When I switch back to `nav-bar`, I don’t see `hero.html`, but I do see `navbar.html`.
-
-<p align="center">
-  <img width="700" alt="switching branches and verifying files" src="https://github.com/user-attachments/assets/file-CMCbHiiSiiRbo9GHQN51sp" />
-</p>
 
 ---
 
@@ -392,7 +388,7 @@ git log --oneline
 This is what it looked like for each branch.
 
 <p align="center">
-  <img width="700" alt="git log and HEAD for each branch" src="https://github.com/user-attachments/assets/file-Ah8N9mSxmDn5z4auxeACmz" />
+  <img width="573" alt="Switched to branch" src="https://github.com/user-attachments/assets/919dc713-6247-445f-b445-0a76eec10c75" />
 </p>
 
 ---
