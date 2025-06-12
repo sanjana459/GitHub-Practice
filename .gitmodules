@@ -1,0 +1,6 @@
+[submodule "gitone"]
+	path = gitone
+	url = git@github.com:sanjana459/gitone.git
+[submodule "gittwo"]
+	path = gittwo
+	url = git@github.com:sanjana459/gittwo.git
