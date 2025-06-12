@@ -67,7 +67,7 @@ Only the `gitone` folder is being tracked — not the parent folders.
 ⚠️ Important: Git must be initialized only once per project, inside the folder you want to track.
 
 <p align="center">
-  <img width="700" alt="after git init" src="https://github.com/user-attachments/assets/bef558a7-6adf-4345-964a-018836860486" />
+  <img width="668" alt="Pasted Graphic 1" src="https://github.com/user-attachments/assets/fb4de15c-9978-495f-b1f3-6a381fc8a296" />
 </p>
 
 ---
@@ -81,7 +81,7 @@ ls -la
 ```
 
 <p align="center">
-  <img width="700" alt="showing hidden .git folder" src="https://github.com/user-attachments/assets/a9e0a8b9-50a2-4898-af17-cd40b6719c81" />
+  <img width="493" alt="drvxr-xr-x 3 sanjanareddy" src="https://github.com/user-attachments/assets/00764ce0-cf47-488b-91c4-ed0912d8d976" />
 </p>
 
 I was curious and opened the `.git` folder:
@@ -92,7 +92,7 @@ ls
 ```
 
 <p align="center">
-  <img width="700" alt="inside git folder" src="https://github.com/user-attachments/assets/c5fb2da8-e102-4bcf-8941-b76efe6ec810" />
+  <img width="783" alt="objects" src="https://github.com/user-attachments/assets/ef8f1b2e-98c5-459c-8667-742a2e20c5f9" />
 </p>
 
 ---
@@ -106,7 +106,7 @@ Working Dir --(git add)--> Staging Area --(git commit)--> Repo --(git push)--> G
 ```
 
 <p align="center">
-  <img width="700" alt="git workflow" src="https://github.com/user-attachments/assets/6e7e0146-7240-4008-84dc-fbbe4de1a5a8" />
+  <img width="547" alt="git commit" src="https://github.com/user-attachments/assets/45078505-20d4-4d8b-b524-877c068a0f3b" />
 </p>
 
 ---
@@ -131,7 +131,7 @@ Untracked files:
 ```
 
 <p align="center">
-  <img width="700" alt="untracked files" src="https://github.com/user-attachments/assets/b9fead79-aeb4-455f-86e9-58d237f7d1f0" />
+  <img width="624" alt="Githubgitone" src="https://github.com/user-attachments/assets/bff5b52c-6486-463f-aa32-544ae0ca5e25" />
 </p>
 
 ---
@@ -151,7 +151,7 @@ git status
 Now `testone.txt` is staged, and `texttwo.txt` is still untracked.
 
 <p align="center">
-  <img width="700" alt="staging status" src="https://github.com/user-attachments/assets/3f663f1f-dd25-4a98-85e0-3481030752c3" />
+  <img width="558" alt="On branch master" src="https://github.com/user-attachments/assets/548014b6-3665-4647-be97-b181b938e7bc" />
 </p>
 
 ---
@@ -164,13 +164,13 @@ git commit -m "add file one"
 ```
 
 <p align="center">
-  <img width="700" alt="commit first file" src="https://github.com/user-attachments/assets/f3a28e64-0304-4613-8175-8b7560f9b71f" />
+  <img width="608" alt="(aster (Post-cedy) 5366105) rd gite e git commit - add file one" src="https://github.com/user-attachments/assets/a954db6b-191c-4853-b51c-f8f7a2afeabd" />
 </p>
 
 Checked `git status` after that and everything was clean.
 
 <p align="center">
-  <img width="700" alt="clean status" src="https://github.com/user-attachments/assets/1e6d075d-1ab4-4038-9694-e50e369f8868" />
+  <img width="503" alt="• (base) sanjanareddy@Gs-MacBook-Pro gitone   git status" src="https://github.com/user-attachments/assets/f2b0705d-daaf-4704-a150-a4805bcc22f6" />
 </p>
 
 ---
@@ -184,5 +184,5 @@ git log --oneline
 ```
 
 <p align="center">
-  <img width="700" alt="git log view" src="https://github.com/user-attachments/assets/36de56b5-e67d-475b-9369-b973dbeb8b01" />
+  <img width="502" alt="commit ca9a5ea9fcedc00e80f096410390d1941958f1f5" src="https://github.com/user-attachments/assets/44401655-09c3-430a-b7d5-ed86ad235457" />
 </p>
