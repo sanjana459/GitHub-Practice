@@ -537,5 +537,69 @@ This let me check what exactly changed between two points in time.
   <img width="579" alt="(footer) update index file with footer code" src="https://github.com/user-attachments/assets/ab1906a0-1463-4c0d-99a1-fd5625abab02" />
 </p>
 
+---
+
+## Git Stash
+
+Think of `git stash` like a temporary bag where you can keep your current work safely aside, so you can do something else without losing it.
+
+---
+
+Here I created a branch called `bug`, made changes to `footer.html`, but did not stage it. I tried moving to another branch expecting an error so I can stash it — Git didn’t throw an error but told me the file was modified.
+
+<img src="https://github.com/user-attachments/assets/your_path/63bd2df2-47fd-40f5-a5a5-695462b5aa88.png" width="800" />
+
+Git allows you to switch branches with uncommitted changes only if:
+> The file you changed (`footer.html`) exists in both branches and doesn't conflict between them.
+
+---
+
+Here I made changes to the footer and committed it. I switched to the bug branch, made changes again, but didn't commit. When I tried to go back to footer, Git threw an error because there would be a conflict.
+
+<img src="https://github.com/user-attachments/assets/your_path/6fd50766-39da-4a66-ab64-12c388521429.png" width="800" />
+
+---
+
+Now I stashed the changes in the bug branch.
+
+<img src="https://github.com/user-attachments/assets/your_path/7bf5d2c1-0b0d-4253-955c-cea13e8c9183.png" width="800" />
+
+---
+
+Here I moved back to the bug branch and popped the stash. My changes were restored to the file.
+
+<img src="https://github.com/user-attachments/assets/your_path/ba3e1f89-3360-4151-9e6b-eaa6ab96533e.png" width="800" />
+
+---
+
+After finishing the work, I merged all the branches into `master` and the working tree is clean.
+
+<img src="https://github.com/user-attachments/assets/your_path/c24368f7-c1db-48a0-9425-9bea6b24e81b.png" width="800" />
+
+---
+
+## Stash List
+
+Git allows listing the stash with:
+
+```bash
+git stash list
+```
+
+<img src="https://github.com/user-attachments/assets/your_path/d0567dc1-cdb8-4a6d-84a1-11c17d71620a.png" width="800" />
+
+---
+
+## Additional Git Commands
+
+### Git Checkout
+
+<img src="https://github.com/user-attachments/assets/your_path/fe81e3a4-b2cb-4ddf-ac31-f8877348698e.png" width="800" />
+
+---
+
+### Git Reflog
+
+<img src="https://github.com/user-attachments/assets/your_path/14Pw3ZPfNHngGzgRaCFUjM.png" width="800" />
 
 
