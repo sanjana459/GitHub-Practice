@@ -1,5 +1,5 @@
 ## Welcome to my Git & GitHub practice journey! 👋 
-Hi! This is a small guide I made while learning Git and GitHub. I’ve added all the things I practiced—like how to make branches, merge them, solve conflicts, use stash, rebase, and even how to push code to GitHub using SSH keys. I’ve included screenshots of the actual steps I tried on my laptop so that it’s easier to understand and remember. This is mainly for my own reference, but if someone else is learning Git, I hope this helps them too. Everything is explained in a simple way without too much technical jargon.
+Hi! This is a small guide I made while learning Git and GitHub. I’ve added all the things I practiced, like how to make branches, merge them, solve conflicts, use stash, rebase, and even how to push code to GitHub using SSH keys. I’ve included screenshots of the actual steps I tried on my laptop so that it’s easier to understand and remember. This is mainly for my own reference, but if someone else is learning Git, I hope this helps them too. Everything is explained in a simple way without too much technical jargon.
 
 ## 🔹 Git Init and Hidden Folders
 
