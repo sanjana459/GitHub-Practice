@@ -281,118 +281,128 @@ I created a new branch called `nav-bar` using:
 git branch nav-bar
 ```
 
-To switch to it:
+Then I checked the branches with:
+```bash
+git branch
+```
+
+And switched to the new one:
 ```bash
 git checkout nav-bar
 ```
 
 <p align="center">
-  <img width="700" alt="creating and switching branches" src="https://github.com/user-attachments/assets/0a6c4783-c612-4f00-ae29-921495b151e4" />
+  <img width="700" alt="creating and switching branches" src="https://github.com/user-attachments/assets/file-EZRoygRXRd6AAhzBsEBYb2" />
 </p>
-
-Now I’m working on the `nav-bar` branch (the * means active).
 
 ---
 
-## 🔹 Adding Files in the New Branch
+## 🔹 Git Graph Before Working on New Branch
 
-I created a file inside the `nav-bar` branch and committed it:
+At this point, the `nav-bar` branch was created, but no changes were made to it yet.
 
+<p align="center">
+  <img width="700" alt="initial git graph after branch creation" src="https://github.com/user-attachments/assets/file-YS6saJShoBopYbZx2iQZRM" />
+</p>
+
+---
+
+## 🔹 Committing in the `nav-bar` Branch
+
+I created a new file:
 ```bash
 touch navbar.html
+```
+Added it and committed:
+```bash
 git add .
 git commit -m "add navbar to code base"
 ```
 
 <p align="center">
-  <img width="700" alt="navbar commit in branch" src="https://github.com/user-attachments/assets/eb78d80b-9508-4e03-a1f3-6da771fe31bc" />
-</p>
-
-### 🧠 Git Graph confirms the commit
-
-<p align="center">
-  <img width="700" alt="graph before branching" src="https://github.com/user-attachments/assets/04aa2ee9-1b7f-4750-b956-f017a601404e" />
+  <img width="700" alt="navbar commit in nav-bar branch" src="https://github.com/user-attachments/assets/file-4zgkoCRLZS9cYACqXEvRY2" />
 </p>
 
 ---
 
-## 🔹 Switching Back to Master
+## 🔍 Git Graph After Commit to nav-bar
 
-Now I switched to the `master` branch:
+Now the graph shows that `nav-bar` has progressed beyond `master`.
 
+<p align="center">
+  <img width="700" alt="graph after navbar commit" src="https://github.com/user-attachments/assets/file-MSt73VuoiqYrAs8HKCvZRL" />
+</p>
+
+---
+
+## 🔁 Switching to Master Branch
+
+Switched to master:
 ```bash
 git checkout master
 ```
 
-I created and committed another file called `hero.html` here:
+Created a new file:
 ```bash
 touch hero.html
+```
+
+Committed the file:
+```bash
 git add .
 git commit -m "add hero section to the code base"
 ```
 
 <p align="center">
-  <img width="700" alt="committing to master" src="https://github.com/user-attachments/assets/1a4af661-4bb2-4077-a21d-b1ab3623be89" />
+  <img width="700" alt="creating hero file and switching branches" src="https://github.com/user-attachments/assets/file-4aJ3Hex4BMV1gZUbDvxeQS" />
 </p>
 
 ---
 
-## 🔍 Checking Git Graph Again
+## 🔍 Git Graph After Both Branches Have Commits
 
-We can now see that both `master` and `nav-bar` have diverged.
+Now `master` has its own new commit, and so does `nav-bar`.  
+You can clearly see the diverged paths.
 
 <p align="center">
-  <img width="700" alt="branch divergence graph" src="https://github.com/user-attachments/assets/851a66b7-eda3-4969-854e-c174cb0779f9" />
+  <img width="700" alt="diverged graph" src="https://github.com/user-attachments/assets/file-5N1Wqnrxkte4Mx64kXQPn4" />
 </p>
-
-This means changes made in `nav-bar` aren’t visible in `master`, and vice versa — because we haven't merged anything yet.
 
 ---
 
-## 🔁 Switching Branches
+## 🔁 Switching Between Branches Again
 
-I used this to see both branches:
-```bash
-git branch
-```
-
-Then used:
-```bash
-git checkout nav-bar
-```
-
-Now `navbar.html` is visible but `hero.html` is not — again because no merging has happened.
+When I’m on `master`, I see only `hero.html`.  
+When I switch back to `nav-bar`, I don’t see `hero.html`, but I do see `navbar.html`.
 
 <p align="center">
-  <img width="700" alt="switching between branches" src="https://github.com/user-attachments/assets/73ef9030-425b-4422-b581-c06b560fb878" />
+  <img width="700" alt="switching branches and verifying files" src="https://github.com/user-attachments/assets/file-CMCbHiiSiiRbo9GHQN51sp" />
 </p>
 
 ---
 
-## 🔹 HEAD Explanation + Git Log
+## 🔹 Git Log and HEAD
 
-`HEAD` points to where the branch is currently at.
+`HEAD` shows the latest commit for the branch you’re currently on.
 
-You can check it with:
 ```bash
 git log --oneline
 ```
 
-Here’s how it looked in each branch.
+This is what it looked like for each branch.
 
 <p align="center">
-  <img width="700" alt="head pointer explanation and logs" src="https://github.com/user-attachments/assets/eb990fff-0141-468b-a2a9-d7bbc996a9ab" />
+  <img width="700" alt="git log and HEAD for each branch" src="https://github.com/user-attachments/assets/file-Ah8N9mSxmDn5z4auxeACmz" />
 </p>
 
 ---
 
 ### 🧠 Side Note:
 
-`git switch branch-name` is similar to `git checkout branch-name`.  
+`git switch branch-name` works just like `git checkout branch-name`.  
 But `switch` is newer and more readable.
 
-<p align="center">
-  <img width="700" alt="git switch vs checkout" src="https://github.com/user-attachments/assets/00bdae23-8879-4083-86fd-5dd7a7d764bf" />
-</p>
+---
+
 
 
