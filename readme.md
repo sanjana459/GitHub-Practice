@@ -1,5 +1,5 @@
 ## Welcome to my Git & GitHub practice journey! 👋 
-This README is a complete walkthrough of everything I’ve learned and practiced—from basic commands to advanced concepts like merge conflicts, stash, and rebase. I’ve documented my experience with real terminal screenshots, Git Graph visuals, and simple explanations to help make concepts easier to understand. Whether you're just starting out with Git or want to brush up on branching, SSH setup, or open-source contribution steps, this guide walks you through it all in a beginner-friendly way. I’ve included examples from my own workflow so it feels more practical than textbook. Hope it helps! 🚀
+Hi! This is a small guide I made while learning Git and GitHub. I’ve added all the things I practiced—like how to make branches, merge them, solve conflicts, use stash, rebase, and even how to push code to GitHub using SSH keys. I’ve included screenshots of the actual steps I tried on my laptop so that it’s easier to understand and remember. This is mainly for my own reference, but if someone else is learning Git, I hope this helps them too. Everything is explained in a simple way without too much technical jargon.
 
 ## 🔹 Git Init and Hidden Folders
 
