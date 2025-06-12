@@ -27,9 +27,9 @@ I created three folders: `gitone`, `gittwo`, `gitthree`.
 
 Git doesn’t automatically track folders or files unless I initialize it inside that folder.
 
-🖼️ *Screenshot:* Folder creation and `ls` command  
-`![Folder creation](images/folder-creation.png)`
-
+<p align="center">
+  <img width="894" alt="Pasted Graphic" src="https://github.com/user-attachments/assets/0b440e69-c0de-44e8-a1e6-8a2af90f341c" />
+</p>
 ---
 
 ### ⚠️ Before `git init`
