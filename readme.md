@@ -622,3 +622,154 @@ git stash list
   <img width="802" alt="Pasted Graphic 51" src="https://github.com/user-attachments/assets/eba054bb-7244-4f1e-bd40-a181f066c7c8" />
 </p>
 
+## 🔄 Git Rebase
+
+Git rebase is used to:
+
+- Clean up history
+- Reapply commits on top of another base tip
+- Avoid unnecessary merge commits
+
+📌 **Note**: Never rebase on `main` or `master`. Always do it from a feature or bugfix branch.
+
+---
+
+### 📌 Rebase Diagram
+
+![Rebase vs Merge](./rebase-vs-merge.png)  
+> The top shows a standard merge history with merge commits. The bottom shows a rebased linear history with clean commit sequence.
+
+---
+
+### ✅ Scenario Setup: Commits on master and bug branch
+
+1. Made a commit on `master`: “update main website”
+2. Switched to `bug` and committed: “updat navbar”
+3. Switched back to `master` and made another commit: “images added”
+
+![commit-flow](./rebase-commit-flow.png)
+
+---
+
+### 🔃 Merging master into bug (Before rebase)
+
+- Switched to `bug`
+- Ran `git merge master`
+
+Result:
+- Merge completed using `ort` strategy
+- `footer.html` and `index.html` had insertions and deletions
+
+![merge-output](./merge-output.png)
+
+---
+
+### 🔍 Git Graph Before Rebase
+
+![git-graph-before-rebase](./git-graph-before-rebase.png)  
+> You can observe multiple merge lines here — not a clean history.
+
+---
+
+### ⛏️ More Changes on bug and master
+
+- From `bug`, committed another fix
+- Switched to `master` again and added more changes
+
+![commit-on-both](./commit-on-both.png)
+
+---
+
+### 🧹 Performing the Rebase
+
+- Switched to `bug`
+- Ran:
+
+```bash
+git rebase master
+```
+
+Result:
+- Rebase successful and history is rewritten
+
+![rebase-command](./rebase-command.png)
+
+---
+
+### 📈 Git Graph After Rebase
+
+![git-graph-after-rebase](./git-graph-after-rebase.png)  
+> Notice: No merge commits. `bug` sits cleanly on top of `master`. This is what rebase gives us — a linear, readable commit history.
+
+---
+
+## 🔐 SSH Keys in GitHub
+
+SSH keys are like a secure, unique signature from your computer that says:
+> "Hey GitHub, it’s me! Let me push/pull without typing credentials."
+
+### ✨ Why use SSH keys?
+
+| 🔒 Reason             | ✅ Benefit                                |
+|----------------------|--------------------------------------------|
+| Secure               | Only your device can access GitHub         |
+| Easy                 | No password typing every time              |
+| Consistent           | Works even after changing GitHub password |
+| Safer than password  | Almost impossible to guess                 |
+
+---
+
+### ⚙️ Setting up SSH (Based on GitHub Docs)
+
+1. Generate SSH key:
+   - [Generating SSH key guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+2. (Optional) Add to SSH agent:
+   - Useful only if passphrase is set for key
+   - Helps avoid retyping passphrase
+
+3. Add key to GitHub:
+   - [Add SSH key to GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+
+---
+
+### 🚀 Pushing Code with SSH
+
+Example commands:
+```bash
+git remote add origin git@github.com:sanjana459/gitone.git
+git push -u origin master
+```
+
+![push-ssh](./push-ssh.png)
+
+---
+
+### 🔁 Git Remote Check
+
+```bash
+git remote -v
+```
+
+![remote-check](./remote-check.png)
+
+---
+
+## 🧑‍💻 Quick Git Reference
+
+| Command              | Purpose                                                              |
+|----------------------|----------------------------------------------------------------------|
+| `git clone`          | Downloads full repo from GitHub (code + history)                     |
+| `git pull`           | Pulls changes from remote and merges                                 |
+| `git fetch`          | Downloads changes from remote but doesn’t merge                      |
+
+---
+
+## 🤝 For Open Source Contributions
+
+1. Fork repo
+2. Clone forked repo
+3. Create new branch (`navbar`)
+4. Push changes: `git push origin navbar`
+5. Open pull request from `navbar` in your forked repo to the original repo
+
