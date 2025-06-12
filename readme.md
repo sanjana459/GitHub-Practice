@@ -207,11 +207,11 @@ git config --list
 ```
 
 <p align="center">
-  <img width="700" alt="git config 1" src="https://github.com/user-attachments/assets/90e4d962-1a32-465c-a00f-35e81f710040" />
+  <img width="762" alt="Setting your Git username for every repository on your computer" src="https://github.com/user-attachments/assets/5cb83cd2-000d-4a9e-b686-7279171f94ce" />
 </p>
 
 <p align="center">
-  <img width="700" alt="git config 2" src="https://github.com/user-attachments/assets/GTEabogVhEpLJGH8b3Awc3" />
+  <img width="778" alt="Pasted Graphic 13" src="https://github.com/user-attachments/assets/765be578-1f4c-4726-aedd-c9de1f4663fb" />
 </p>
 
 ---
@@ -222,7 +222,7 @@ All environment variables and sensitive info should be added to `.gitignore`
 This ensures Git **doesn’t track** them accidentally.
 
 <p align="center">
-  <img width="700" alt="env file visible in git" src="https://github.com/user-attachments/assets/file-EMBxp5NVPHk9UHb5JU27iV" />
+  <img width="591" alt="Untracked files" src="https://github.com/user-attachments/assets/207ce60e-5eba-4401-ad27-4bc1c56cf8a9" />
 </p>
 
 In the above image, you can see the `.env` file is being tracked by Git — which we don’t want.
@@ -230,13 +230,13 @@ In the above image, you can see the `.env` file is being tracked by Git — whic
 So I added `.env` and other private files into `.gitignore`.
 
 <p align="center">
-  <img width="700" alt="files added to gitignore" src="https://github.com/user-attachments/assets/file-A3P1fZnabqKVMrHcTvKQxL" />
+  <img width="1184" alt="Pasted Graphic 15" src="https://github.com/user-attachments/assets/a31852dd-0e87-46d2-9aeb-b844d44973eb" />
 </p>
 
 Now, when I check `git status`, Git is ignoring those files as expected:
 
 <p align="center">
-  <img width="700" alt="git status ignoring files" src="https://github.com/user-attachments/assets/file-4wzrLnrpz3Zj4rPkexxGPh" />
+  <img width="668" alt="(base sanjanareddyes-MacBook-Pro gitone A git status" src="https://github.com/user-attachments/assets/45cecd85-af65-435f-8946-1eaaa64b3bbd" />
 </p>
 
 I then committed the `.gitignore` file like a normal file:
@@ -244,11 +244,6 @@ I then committed the `.gitignore` file like a normal file:
 git add .gitignore
 git commit -m "add gitignore file"
 ```
-
-<p align="center">
-  <img width="700" alt="gitignore commit" src="https://github.com/user-attachments/assets/file-6dRsBGC3kRCgjgQ2UYNAAw" />
-</p>
-
 ---
 
 ### 🧠 Side Note
@@ -257,7 +252,7 @@ I found out that there are `.gitignore` generators online.
 They suggest what files to ignore based on your tech stack (Node, Python, etc.) — super useful!
 
 <p align="center">
-  <img width="700" alt="git graph view" src="https://github.com/user-attachments/assets/file-CqoUYMnQJMtobmegbjCt31" />
+  <img width="1192" alt="Pasted Graphic 17" src="https://github.com/user-attachments/assets/a42f6838-6006-4687-8919-d32a0e182cb1" />
 </p>
 
 ---
@@ -268,11 +263,11 @@ Branches are like alternative timelines 😄
 By default, Git creates a branch called `master` (or sometimes `main`).
 
 <p align="center">
-  <img width="700" alt="branch status 1" src="https://github.com/user-attachments/assets/file-6x3hibJbuSNfGyA3iWBX5c" />
+  <img width="485" alt="Pasted Graphic 18" src="https://github.com/user-attachments/assets/7890aec9-3e3d-4d97-a2e1-335c8ccb5d0d" />
 </p>
 
 <p align="center">
-  <img width="700" alt="branch status 2" src="https://github.com/user-attachments/assets/file-2wAETRMriDYGffdUjXakwu" />
+  <img width="573" alt="• (base)" src="https://github.com/user-attachments/assets/3d3bdde5-4d62-4997-8dda-ce825b4a50f4" />
 </p>
 
 We can see we are on the master branch here.
