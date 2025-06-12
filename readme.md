@@ -28,57 +28,73 @@ I created three folders: `gitone`, `gittwo`, `gitthree`.
 Git doesn’t automatically track folders or files unless I initialize it inside that folder.
 
 <p align="center">
-  <img width="894" alt="Pasted Graphic" src="https://github.com/user-attachments/assets/0b440e69-c0de-44e8-a1e6-8a2af90f341c" />
+  <img width="700" alt="folder creation" src="https://github.com/user-attachments/assets/0b440e69-c0de-44e8-a1e6-8a2af90f341c" />
 </p>
+
 ---
 
 ### ⚠️ Before `git init`
 
-Tried `git status` and it gave:
+I went into the `gitone` folder and ran:
+```bash
+git status
+```
+
+It gave the error:
 ```
 fatal: not a git repository (or any of the parent directories): .git
 ```
 
-<p align="center">
-  <img width="668" alt="Pasted Graphic 1" src="https://github.com/user-attachments/assets/60346b90-e0d9-4fdc-8392-6ad0d935f3c0" />
-</p>
+Which makes sense — Git wasn’t initialized yet.
 
 ---
 
 ### ✅ After `git init`
 
-Ran:
+I ran:
 ```bash
 git init
 ```
 
-Now when I run `git status`, it shows I'm on the `master` branch.
+Now when I run `git status`, it shows:
+```
+On branch master
+No commits yet
+```
 
-Important to note: Only the folder where you initialize git gets tracked.  
-So here, only `gitone` is being tracked, not the parent folder.
+Only the `gitone` folder is being tracked — not the parent folders.
 
-⚠️ **We initialize Git only once per project.**
+⚠️ Important: Git must be initialized only once per project, inside the folder you want to track.
 
 <p align="center">
-  <img width="493" alt="drvxr-xr-x 3 sanjanareddy" src="https://github.com/user-attachments/assets/452a660b-c792-47e7-9b46-1b43fc305fcc" />
+  <img width="700" alt="after git init" src="https://github.com/user-attachments/assets/bef558a7-6adf-4345-964a-018836860486" />
 </p>
 
 ---
 
-### 📁 The `.git` folder
+### 📁 The `.git` Folder
 
-Once I initialized git, a hidden `.git` folder got created.  
-This is where Git keeps history and tracking info.
+After initialization, a hidden `.git` folder is created.
 
-I got curious and peeked into the `.git` folder — lots of files and subfolders like `config`, `HEAD`, `refs`, etc. 👀
-
-<p align="center">
-  <img width="783" alt="objects" src="https://github.com/user-attachments/assets/2258cfe3-1d32-459a-b796-70ecbd562f59" />
-</p>
+```bash
+ls -la
+```
 
 <p align="center">
-  <img width="547" alt="git commit" src="https://github.com/user-attachments/assets/cb5c83d7-50eb-405f-ad62-5fd4d6d61553" />
+  <img width="700" alt="showing hidden .git folder" src="https://github.com/user-attachments/assets/a9e0a8b9-50a2-4898-af17-cd40b6719c81" />
 </p>
+
+I was curious and opened the `.git` folder:
+
+```bash
+cd .git
+ls
+```
+
+<p align="center">
+  <img width="700" alt="inside git folder" src="https://github.com/user-attachments/assets/c5fb2da8-e102-4bcf-8941-b76efe6ec810" />
+</p>
+
 ---
 
 ## 🔹 Git Commit and Logs
@@ -89,8 +105,9 @@ I got curious and peeked into the `.git` folder — lots of files and subfolders
 Working Dir --(git add)--> Staging Area --(git commit)--> Repo --(git push)--> GitHub
 ```
 
-🖼️ *Screenshot:* Git workflow diagram  
-`![Git workflow](images/git-workflow.png)`
+<p align="center">
+  <img width="700" alt="git workflow" src="https://github.com/user-attachments/assets/6e7e0146-7240-4008-84dc-fbbe4de1a5a8" />
+</p>
 
 ---
 
@@ -113,56 +130,59 @@ Untracked files:
   texttwo.txt
 ```
 
-🖼️ *Screenshot:* Untracked files in git status  
-`![Untracked files](images/untracked-files.png)`
+<p align="center">
+  <img width="700" alt="untracked files" src="https://github.com/user-attachments/assets/b9fead79-aeb4-455f-86e9-58d237f7d1f0" />
+</p>
 
 ---
 
 ### 🟡 Staging with Git Add
 
-Ran:
+I added only one file:
 ```bash
 git add testone.txt
 ```
 
-Now, `git status` shows `testone.txt` as staged (green), while `texttwo.txt` is still untracked (red).
+Then checked status again:
+```bash
+git status
+```
 
-🖼️ *Screenshot:* One file staged  
-`![Staged file](images/file-staged.png)`
+Now `testone.txt` is staged, and `texttwo.txt` is still untracked.
+
+<p align="center">
+  <img width="700" alt="staging status" src="https://github.com/user-attachments/assets/3f663f1f-dd25-4a98-85e0-3481030752c3" />
+</p>
 
 ---
 
 ### 🟢 Committing with Git Commit
 
-Then I committed using:
+I committed the first file:
 ```bash
 git commit -m "add file one"
 ```
 
-Git shows:
-```
-1 file changed, 0 insertions(+), 0 deletions(-)
-create mode 100644 testone.txt
-```
+<p align="center">
+  <img width="700" alt="commit first file" src="https://github.com/user-attachments/assets/f3a28e64-0304-4613-8175-8b7560f9b71f" />
+</p>
 
-✅ Every commit must have a message.  
-Then I added and committed `texttwo.txt`.
+Checked `git status` after that and everything was clean.
 
-🖼️ *Screenshot:* Commit message  
-`![Commit one](images/commit-message.png)`
-
-🖼️ *Screenshot:* Clean git status  
-`![Clean status](images/clean-status.png)`
+<p align="center">
+  <img width="700" alt="clean status" src="https://github.com/user-attachments/assets/1e6d075d-1ab4-4038-9694-e50e369f8868" />
+</p>
 
 ---
 
 ### 🧾 Git Log
 
-To see the commit history:
+To view commit history:
 ```bash
 git log
 git log --oneline
 ```
 
-🖼️ *Screenshot:* Git log view  
-`![Git log](images/git-log.png)`
+<p align="center">
+  <img width="700" alt="git log view" src="https://github.com/user-attachments/assets/36de56b5-e67d-475b-9369-b973dbeb8b01" />
+</p>
