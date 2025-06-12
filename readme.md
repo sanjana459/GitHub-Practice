@@ -186,3 +186,96 @@ git log --oneline
 <p align="center">
   <img width="502" alt="commit ca9a5ea9fcedc00e80f096410390d1941958f1f5" src="https://github.com/user-attachments/assets/44401655-09c3-430a-b7d5-ed86ad235457" />
 </p>
+
+---
+
+## 🔹 Commit Messages Debate
+
+Commits must be atomic — meaning they should only focus on **one thing at a time**: one feature, one fix, one component.
+
+The official recommendation is to write commit messages in **present tense** and **imperative style**.
+
+Honestly, it feels a little too aggressive to me, but yeah… that’s the standard 😅
+
+---
+
+## 🔹 Git Configuration File
+
+You can check your Git config file using:
+```bash
+git config --list
+```
+
+<p align="center">
+  <img width="700" alt="git config 1" src="https://github.com/user-attachments/assets/90e4d962-1a32-465c-a00f-35e81f710040" />
+</p>
+
+<p align="center">
+  <img width="700" alt="git config 2" src="https://github.com/user-attachments/assets/GTEabogVhEpLJGH8b3Awc3" />
+</p>
+
+---
+
+## 🔹 Git Ignore
+
+All environment variables and sensitive info should be added to `.gitignore`  
+This ensures Git **doesn’t track** them accidentally.
+
+<p align="center">
+  <img width="700" alt="env file visible in git" src="https://github.com/user-attachments/assets/file-EMBxp5NVPHk9UHb5JU27iV" />
+</p>
+
+In the above image, you can see the `.env` file is being tracked by Git — which we don’t want.
+
+So I added `.env` and other private files into `.gitignore`.
+
+<p align="center">
+  <img width="700" alt="files added to gitignore" src="https://github.com/user-attachments/assets/file-A3P1fZnabqKVMrHcTvKQxL" />
+</p>
+
+Now, when I check `git status`, Git is ignoring those files as expected:
+
+<p align="center">
+  <img width="700" alt="git status ignoring files" src="https://github.com/user-attachments/assets/file-4wzrLnrpz3Zj4rPkexxGPh" />
+</p>
+
+I then committed the `.gitignore` file like a normal file:
+```bash
+git add .gitignore
+git commit -m "add gitignore file"
+```
+
+<p align="center">
+  <img width="700" alt="gitignore commit" src="https://github.com/user-attachments/assets/file-6dRsBGC3kRCgjgQ2UYNAAw" />
+</p>
+
+---
+
+### 🧠 Side Note
+
+I found out that there are `.gitignore` generators online.  
+They suggest what files to ignore based on your tech stack (Node, Python, etc.) — super useful!
+
+<p align="center">
+  <img width="700" alt="git graph view" src="https://github.com/user-attachments/assets/file-CqoUYMnQJMtobmegbjCt31" />
+</p>
+
+---
+
+## 🔹 Git Branch
+
+Branches are like alternative timelines 😄  
+By default, Git creates a branch called `master` (or sometimes `main`).
+
+<p align="center">
+  <img width="700" alt="branch status 1" src="https://github.com/user-attachments/assets/file-6x3hibJbuSNfGyA3iWBX5c" />
+</p>
+
+<p align="center">
+  <img width="700" alt="branch status 2" src="https://github.com/user-attachments/assets/file-2wAETRMriDYGffdUjXakwu" />
+</p>
+
+We can see we are on the master branch here.
+
+---
+
