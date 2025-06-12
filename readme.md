@@ -39,8 +39,9 @@ Tried `git status` and it gave:
 fatal: not a git repository (or any of the parent directories): .git
 ```
 
-🖼️ *Screenshot:* git status before init  
-`![Not a repo](images/not-a-repo.png)`
+<p align="center">
+  <img width="668" alt="Pasted Graphic 1" src="https://github.com/user-attachments/assets/60346b90-e0d9-4fdc-8392-6ad0d935f3c0" />
+</p>
 
 ---
 
@@ -58,8 +59,9 @@ So here, only `gitone` is being tracked, not the parent folder.
 
 ⚠️ **We initialize Git only once per project.**
 
-🖼️ *Screenshot:* git init and git status  
-`![After git init](images/git-init-status.png)`
+<p align="center">
+  <img width="493" alt="drvxr-xr-x 3 sanjanareddy" src="https://github.com/user-attachments/assets/452a660b-c792-47e7-9b46-1b43fc305fcc" />
+</p>
 
 ---
 
@@ -70,12 +72,13 @@ This is where Git keeps history and tracking info.
 
 I got curious and peeked into the `.git` folder — lots of files and subfolders like `config`, `HEAD`, `refs`, etc. 👀
 
-🖼️ *Screenshot:* `.git` folder view  
-`![Hidden .git folder](images/git-hidden-folder.png)`
+<p align="center">
+  <img width="783" alt="objects" src="https://github.com/user-attachments/assets/2258cfe3-1d32-459a-b796-70ecbd562f59" />
+</p>
 
-🖼️ *Screenshot:* Inside `.git`  
-`![Inside .git](images/inside-git-folder.png)`
-
+<p align="center">
+  <img width="547" alt="git commit" src="https://github.com/user-attachments/assets/cb5c83d7-50eb-405f-ad62-5fd4d6d61553" />
+</p>
 ---
 
 ## 🔹 Git Commit and Logs
