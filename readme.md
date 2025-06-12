@@ -636,7 +636,10 @@ Git rebase is used to:
 
 ### 📌 Rebase Diagram
 
-![Rebase vs Merge](./rebase-vs-merge.png)  
+<p align="center">
+  <img width="688" alt="Pasted Graphic 52" src="https://github.com/user-attachments/assets/1e3fc947-8a76-492e-a6bd-59882b52de56" />
+</p> 
+
 > The top shows a standard merge history with merge commits. The bottom shows a rebased linear history with clean commit sequence.
 
 ---
@@ -647,7 +650,9 @@ Git rebase is used to:
 2. Switched to `bug` and committed: “updat navbar”
 3. Switched back to `master` and made another commit: “images added”
 
-![commit-flow](./rebase-commit-flow.png)
+<p align="center">
+  <img width="595" alt="• (base) sanjanareddy@Gs-MacBook-Pro gittwo   git status" src="https://github.com/user-attachments/assets/ac33cdd0-62a5-4738-bc58-1229b54e4d5c" />
+</p> 
 
 ---
 
@@ -660,13 +665,19 @@ Result:
 - Merge completed using `ort` strategy
 - `footer.html` and `index.html` had insertions and deletions
 
-![merge-output](./merge-output.png)
+<p align="center">
+  <img width="478" alt="• (base) sanjanareddy@Gs-MacBook-Pro gittwo   git checkout bug" src="https://github.com/user-attachments/assets/862b0f56-e852-44ef-bc4b-0458fd381dfc" />
+</p> 
+
 
 ---
 
 ### 🔍 Git Graph Before Rebase
 
-![git-graph-before-rebase](./git-graph-before-rebase.png)  
+<p align="center">
+  <img width="894" alt="Pasted Graphic 55" src="https://github.com/user-attachments/assets/29224cde-8e17-49cd-a774-03147376b0b5" />
+</p> 
+
 > You can observe multiple merge lines here — not a clean history.
 
 ---
@@ -676,7 +687,9 @@ Result:
 - From `bug`, committed another fix
 - Switched to `master` again and added more changes
 
-![commit-on-both](./commit-on-both.png)
+<p align="center">
+  <img width="896" alt="Pasted Graphic 56" src="https://github.com/user-attachments/assets/45fbee05-2c4a-4423-8d32-70d5f52ffec2" />
+</p> 
 
 ---
 
@@ -692,13 +705,18 @@ git rebase master
 Result:
 - Rebase successful and history is rewritten
 
-![rebase-command](./rebase-command.png)
+<p align="center">
+  <img width="621" alt="buoter" src="https://github.com/user-attachments/assets/6a827b5f-f83d-4da2-836e-02ddd28863af" />
+</p>
 
 ---
 
 ### 📈 Git Graph After Rebase
 
-![git-graph-after-rebase](./git-graph-after-rebase.png)  
+<p align="center">
+  <img width="894" alt="Pasted Graphic 58" src="https://github.com/user-attachments/assets/09173880-180b-4204-b10c-f049eb3c8b79" />
+</p>
+
 > Notice: No merge commits. `bug` sits cleanly on top of `master`. This is what rebase gives us — a linear, readable commit history.
 
 ---
@@ -741,7 +759,9 @@ git remote add origin git@github.com:sanjana459/gitone.git
 git push -u origin master
 ```
 
-![push-ssh](./push-ssh.png)
+<p align="center">
+  <img width="755" alt="Pasted Graphic 59" src="https://github.com/user-attachments/assets/6414c975-4039-459d-aede-8f76d643e8e2" />
+</p>
 
 ---
 
@@ -751,7 +771,9 @@ git push -u origin master
 git remote -v
 ```
 
-![remote-check](./remote-check.png)
+<p align="center">
+  <img width="452" alt="git@github comsanjana459gitone-git (fetch)" src="https://github.com/user-attachments/assets/6d1c175a-9a4e-4f88-bad3-8ed83e149cee" />
+</p>
 
 ---
 
