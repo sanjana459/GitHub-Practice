@@ -247,3 +247,299 @@ git commit -m "add gitignore file"
 ---
 
 
+## Git Branch
+
+A branch in Git is like creating a parallel timeline where you can work on something new without touching the main work. Git creates a default branch called `master` (sometimes it’s `main`).
+
+<p align="center">
+  <img width="485" alt="Pasted Graphic 18" src="https://github.com/user-attachments/assets/7890aec9-3e3d-4d97-a2e1-335c8ccb5d0d" />
+</p>
+
+<p align="center">
+  <img width="573" alt="• (base)" src="https://github.com/user-attachments/assets/3d3bdde5-4d62-4997-8dda-ce825b4a50f4" />
+</p>
+
+---
+
+## Creating a Branch
+
+I made a new branch called `nav-bar` like this:
+
+```bash
+git branch nav-bar
+```
+
+To see the list of branches:
+
+```bash
+git branch
+```
+
+And then I switched to the new branch:
+
+```bash
+git checkout nav-bar
+```
+
+<p align="center">
+  <img width="490" alt="branch nav-bar" src="https://github.com/user-attachments/assets/383d898b-b047-41e2-bff3-d2c08d5bff90" />
+</p>
+
+---
+
+## Viewing Branch Progress in Git Graph
+
+At this stage, both branches existed, but only `nav-bar` had new commits.
+
+<p align="center">
+  <img width="898" alt="Pasted Graphic 22" src="https://github.com/user-attachments/assets/10cd283e-a68d-4a26-a4d6-08549d1202d0" />
+</p>
+
+---
+
+## Making Commits in a Branch
+
+Inside the `nav-bar` branch, I created a new file:
+
+```bash
+touch navbar.html
+```
+
+Then I added and committed the change:
+
+```bash
+git add .
+git commit -m "add navbar to code base"
+```
+
+<p align="center">
+  <img width="891" alt="Pasted Graphic 23" src="https://github.com/user-attachments/assets/504907be-12ce-430b-bf02-1f440bfb3bf8" />
+</p>
+
+---
+
+## Switching to Another Branch
+
+I went back to the `master` branch:
+
+```bash
+git checkout master
+```
+
+Then I added a new file:
+
+```bash
+touch hero.html
+```
+
+And committed it:
+
+```bash
+git add .
+git commit -m "add hero section to the code base"
+```
+
+<p align="center">
+  <img width="1190" alt="Pasted Graphic 27" src="https://github.com/user-attachments/assets/c1995e9d-90a7-464d-9511-ceca92acdeef" />
+</p>
+
+---
+
+## Visualizing Diverged Branches
+
+Now both branches had their own unique commits.
+
+<p align="center">
+  <img width="896" alt="Pasted Graphic 28" src="https://github.com/user-attachments/assets/31e87235-c5db-4b46-a150-66caf8742139" />
+</p>
+
+---
+
+## Switching Between Branches
+
+Each branch shows its own committed files. `master` had `hero.html`, and `nav-bar` had `navbar.html`.
+
+---
+
+## Git Log and HEAD
+
+The `HEAD` pointer shows the latest commit for the current branch. You can check:
+
+```bash
+git log --oneline
+```
+
+<p align="center">
+  <img width="573" alt="Switched to branch" src="https://github.com/user-attachments/assets/919dc713-6247-445f-b445-0a76eec10c75" />
+</p>
+
+---
+
+## Git Merge
+
+To combine changes from another branch into the current one, I used:
+
+```bash
+git checkout master
+git merge nav-bar
+```
+
+<p align="center">
+ <img width="569" alt="git merge nav-bar" src="https://github.com/user-attachments/assets/3e04f5f6-d3cc-4e2a-81cf-4fcbe426f72f" />
+</p>
+
+After merging, I deleted the branch:
+
+```bash
+git branch -d nav-bar
+```
+
+<p align="center">
+  <img width="895" alt="Pasted Graphic 31" src="https://github.com/user-attachments/assets/94c6b2da-4167-47a4-a090-971febe3206a" />
+</p>
+
+---
+
+## Handling Merge Conflicts
+
+If both branches edited the same part of a file, Git will pause and ask you to resolve the conflict.
+
+<p align="center">
+  <img width="769" alt="Pasted Graphic 35" src="https://github.com/user-attachments/assets/ff9963ee-819c-48f3-8882-9d1a48823f3f" />
+</p>
+
+Conflict looks like this:
+
+```html
+<<<<<<< HEAD
+content from master
+=======
+content from feature branch
+>>>>>>> branch-name
+```
+
+I manually chose what to keep and removed those conflict markers. Then committed again.
+
+<p align="center">
+  <img width="893" alt="Pasted Graphic 36" src="https://github.com/user-attachments/assets/667957d4-fdf8-45d1-8ba3-9015c40823ef" />
+</p>
+
+---
+
+## Git Diff
+
+To compare staged changes:
+
+```bash
+git diff --staged
+```
+
+<p align="center">
+  <img width="467" alt="git diff" src="https://github.com/user-attachments/assets/dd332025-5313-421b-9629-7938fcc86abf" />
+</p>
+
+You can also check differences between two commits:
+
+```bash
+git log --oneline
+git diff <commit1> <commit2>
+```
+
+---
+
+## Git Stash
+
+When you need to pause work and switch tasks but aren’t ready to commit, stash is useful:
+
+```bash
+git stash
+```
+
+It saves your current changes and cleans up the working directory.
+
+```bash
+git stash list
+git stash pop
+```
+
+<p align="center">
+  <img width="704" alt="stash" src="https://github.com/user-attachments/assets/7695da90-9705-4e4f-8abf-69ddf50e2d91" />
+</p>
+
+---
+
+## Git Rebase
+
+Rebase helps clean up commit history by stacking commits in a linear order.
+
+📌 Do not use `rebase` on the `main` or `master` branch directly.
+
+```bash
+git rebase master
+```
+
+This replays your changes from the feature branch as if they were added after the latest `master` commit.
+
+<p align="center">
+  <img width="894" alt="Pasted Graphic 58" src="https://github.com/user-attachments/assets/09173880-180b-4204-b10c-f049eb3c8b79" />
+</p>
+
+Now the graph is clean—no extra merge commits.
+
+---
+
+## Setting Up SSH with GitHub
+
+SSH lets you push code without entering your password every time.
+
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+Then add your public key to GitHub settings under SSH keys.
+
+To connect:
+
+```bash
+git remote add origin git@github.com:yourusername/yourrepo.git
+git push -u origin master
+```
+
+<p align="center">
+  <img width="755" alt="SSH" src="https://github.com/user-attachments/assets/6414c975-4039-459d-aede-8f76d643e8e2" />
+</p>
+
+---
+
+## Useful Git Commands Summary
+
+| Command            | What It Does                                              |
+|--------------------|-----------------------------------------------------------|
+| `git clone`        | Copy a repo from GitHub to your computer                  |
+| `git pull`         | Bring latest changes from GitHub into your local project |
+| `git push`         | Upload your local changes to GitHub                      |
+| `git checkout`     | Switch between branches                                  |
+| `git branch`       | View or create branches                                  |
+| `git stash`        | Temporarily save uncommitted changes                     |
+| `git rebase`       | Clean up commit history                                  |
+
+---
+
+## Open Source Contribution Flow
+
+If you're contributing to someone else's GitHub repo:
+
+1. Fork their repository
+2. Clone your fork
+3. Create a branch for your changes
+4. Make edits and push to your branch
+5. Open a pull request to the original repo
+
+---
+
+## Final Words
+
+Everything here is what I practiced myself. I made sure to try the commands and take screenshots so I could remember things better later.
+
+If you’re just starting out with Git, I hope this guide helped you see things clearly. Thanks for reading!
+
