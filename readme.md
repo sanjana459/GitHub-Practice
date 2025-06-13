@@ -44,7 +44,7 @@ It gave the error:
 fatal: not a git repository (or any of the parent directories): .git
 ```
 
-Which makes sense — Git wasn’t initialized yet.
+Which makes sense, Git wasn’t initialized yet.
 
 ---
 
@@ -61,7 +61,7 @@ On branch master
 No commits yet
 ```
 
-Only the `gitone` folder is being tracked — not the parent folders.
+Only the `gitone` folder is being tracked, not the parent folders.
 
 Important: Git must be initialized only once per project, inside the folder you want to track.
 
@@ -190,7 +190,7 @@ git log --oneline
 
 ## Commit Messages Debate
 
-Commits must be atomic — meaning they should only focus on **one thing at a time**: one feature, one fix, one component.
+Commits must be atomic, meaning they should only focus on **one thing at a time**: one feature, one fix, one component.
 
 The official recommendation is to write commit messages in **present tense** and **imperative style**.
 
@@ -224,7 +224,7 @@ This ensures Git **doesn’t track** them accidentally.
   <img width="591" alt="Untracked files" src="https://github.com/user-attachments/assets/207ce60e-5eba-4401-ad27-4bc1c56cf8a9" />
 </p>
 
-In the above image, you can see the `.env` file is being tracked by Git — which we don’t want.
+In the above image, you can see the `.env` file is being tracked by Git, which we don’t want.
 
 So I added `.env` and other private files into `.gitignore`.
 
@@ -248,7 +248,7 @@ git commit -m "add gitignore file"
 ### Side Note
 
 I found out that there are `.gitignore` generators online.  
-They suggest what files to ignore based on your tech stack (Node, Python, etc.) — super useful!
+They suggest what files to ignore based on your tech stack (Node, Python, etc), super useful!!!
 
 <p align="center">
   <img width="1192" alt="Pasted Graphic 17" src="https://github.com/user-attachments/assets/a42f6838-6006-4687-8919-d32a0e182cb1" />
@@ -258,8 +258,8 @@ They suggest what files to ignore based on your tech stack (Node, Python, etc.) 
 
 ## Git Branch
 
-Branches are like alternative timelines 😄  
-By default, Git creates a branch called `master` (or sometimes `main`).
+Branches are like alternative timelines 
+By default, Git creates a branch called `master` (or sometimes `main`)
 
 <p align="center">
   <img width="485" alt="Pasted Graphic 18" src="https://github.com/user-attachments/assets/7890aec9-3e3d-4d97-a2e1-335c8ccb5d0d" />
@@ -269,7 +269,7 @@ By default, Git creates a branch called `master` (or sometimes `main`).
   <img width="573" alt="• (base)" src="https://github.com/user-attachments/assets/3d3bdde5-4d62-4997-8dda-ce825b4a50f4" />
 </p>
 
-We can see we are on the master branch here.
+We can see we are on the master branch here
 
 ---
 
@@ -412,7 +412,7 @@ git merge nav-bar
  <img width="569" alt="• (base) sanjanareddy@Gs-MacBook-Pro gittwo   git checkout master" src="https://github.com/user-attachments/assets/3e04f5f6-d3cc-4e2a-81cf-4fcbe426f72f" />
 </p>
 
-The `++++++++++++` in green means only new lines were added — no deletions. Merge was successful!
+The `++++++++++++` in green means only new lines were added, no deletions. Merge was successful!
 
 Later, I deleted the `nav-bar` branch since it was already merged:
 
@@ -544,7 +544,7 @@ Think of `git stash` like a temporary bag where you can keep your current work s
 
 ---
 
-Here I created a branch called `bug`, made changes to `footer.html`, but did not stage it. I tried moving to another branch expecting an error so I can stash it — Git didn’t throw an error but told me the file was modified.
+Here I created a branch called `bug`, made changes to `footer.html`, but did not stage it. I tried moving to another branch expecting an error so I can stash it, Git didn’t throw an error but told me the file was modified.
 
 <p align="center">
   <img width="541" alt="s to branddy Pos-MacBook-Pro gittwo   git" src="https://github.com/user-attachments/assets/c7329c4f-be08-48ed-be49-36c84f4c0b47" />
@@ -677,7 +677,7 @@ Result:
   <img width="894" alt="Pasted Graphic 55" src="https://github.com/user-attachments/assets/29224cde-8e17-49cd-a774-03147376b0b5" />
 </p> 
 
-> You can observe multiple merge lines here — not a clean history.
+> You can observe multiple merge lines here, not a clean history.
 
 ---
 
