@@ -1,11 +1,9 @@
-Readme
-
 ## Welcome to my Git & GitHub practice journey! 👋 
 Hi! This is a small guide I made while learning Git and GitHub. I’ve added all the things I practiced, like how to make branches, merge them, solve conflicts, use stash, rebase, and even how to push code to GitHub using SSH keys. I’ve included screenshots of the actual steps I tried on my laptop so that it’s easier to understand and remember. This is mainly for my own reference, but if someone else is learning Git, I hope this helps them too. Everything is explained in a simple way without too much technical jargon.
 
-## 🔹 Git Init and Hidden Folders
+## Git Init and Hidden Folders
 
-### 📝 Side Notes:
+### Side Notes:
 
 - Git is the software, GitHub is a service.
 - Version Control System tracks files for changes. Git is a version control system.
@@ -22,7 +20,7 @@ Hi! This is a small guide I made while learning Git and GitHub. I’ve added all
 
 ---
 
-### 📁 Folder Setup
+### Folder Setup
 
 I created three folders: `gitone`, `gittwo`, `gitthree`.
 
@@ -34,7 +32,7 @@ Git doesn’t automatically track folders or files unless I initialize it inside
 
 ---
 
-### ⚠️ Before `git init`
+### Before `git init`
 
 I went into the `gitone` folder and ran:
 ```bash
@@ -50,7 +48,7 @@ Which makes sense — Git wasn’t initialized yet.
 
 ---
 
-### ✅ After `git init`
+### After `git init`
 
 I ran:
 ```bash
@@ -65,7 +63,7 @@ No commits yet
 
 Only the `gitone` folder is being tracked — not the parent folders.
 
-⚠️ Important: Git must be initialized only once per project, inside the folder you want to track.
+Important: Git must be initialized only once per project, inside the folder you want to track.
 
 <p align="center">
   <img width="668" alt="Pasted Graphic 1" src="https://github.com/user-attachments/assets/fb4de15c-9978-495f-b1f3-6a381fc8a296" />
@@ -73,7 +71,7 @@ Only the `gitone` folder is being tracked — not the parent folders.
 
 ---
 
-### 📁 The `.git` Folder
+### The `.git` Folder
 
 After initialization, a hidden `.git` folder is created.
 
@@ -98,9 +96,9 @@ ls
 
 ---
 
-## 🔹 Git Commit and Logs
+## Git Commit and Logs
 
-### ✅ Git Workflow Recap:
+### Git Workflow Recap:
 
 ```
 Working Dir --(git add)--> Staging Area --(git commit)--> Repo --(git push)--> GitHub
@@ -112,7 +110,7 @@ Working Dir --(git add)--> Staging Area --(git commit)--> Repo --(git push)--> G
 
 ---
 
-### 📄 File Creation
+### File Creation
 
 I created two text files:
 ```bash
@@ -137,7 +135,7 @@ Untracked files:
 
 ---
 
-### 🟡 Staging with Git Add
+### Staging with Git Add
 
 I added only one file:
 ```bash
@@ -157,7 +155,7 @@ Now `testone.txt` is staged, and `texttwo.txt` is still untracked.
 
 ---
 
-### 🟢 Committing with Git Commit
+### Committing with Git Commit
 
 I committed the first file:
 ```bash
@@ -176,7 +174,7 @@ Checked `git status` after that and everything was clean.
 
 ---
 
-### 🧾 Git Log
+### Git Log
 
 To view commit history:
 ```bash
@@ -190,7 +188,7 @@ git log --oneline
 
 ---
 
-## 🔹 Commit Messages Debate
+## Commit Messages Debate
 
 Commits must be atomic — meaning they should only focus on **one thing at a time**: one feature, one fix, one component.
 
@@ -200,7 +198,7 @@ Honestly, it feels a little too aggressive to me, but yeah… that’s the stand
 
 ---
 
-## 🔹 Git Configuration File
+## Git Configuration File
 
 You can check your Git config file using:
 ```bash
@@ -217,7 +215,7 @@ git config --list
 
 ---
 
-## 🔹 Git Ignore
+## Git Ignore
 
 All environment variables and sensitive info should be added to `.gitignore`  
 This ensures Git **doesn’t track** them accidentally.
@@ -247,7 +245,7 @@ git commit -m "add gitignore file"
 ```
 ---
 
-### 🧠 Side Note
+### Side Note
 
 I found out that there are `.gitignore` generators online.  
 They suggest what files to ignore based on your tech stack (Node, Python, etc.) — super useful!
@@ -258,7 +256,7 @@ They suggest what files to ignore based on your tech stack (Node, Python, etc.) 
 
 ---
 
-## 🔹 Git Branch
+## Git Branch
 
 Branches are like alternative timelines 😄  
 By default, Git creates a branch called `master` (or sometimes `main`).
@@ -275,7 +273,7 @@ We can see we are on the master branch here.
 
 ---
 
-## 🔹 Creating Branches
+## Creating Branches
 
 I created a new branch called `nav-bar` using:
 ```bash
@@ -298,7 +296,7 @@ git checkout nav-bar
 
 ---
 
-## 🔹 Git Graph Before Working on New Branch
+## Git Graph Before Working on New Branch
 
 At this point, the `nav-bar` branch was created, but no changes were made to it yet.
 
@@ -308,7 +306,7 @@ At this point, the `nav-bar` branch was created, but no changes were made to it 
 
 ---
 
-## 🔹 Committing in the `nav-bar` Branch
+## Committing in the `nav-bar` Branch
 
 I created a new file:
 ```bash
@@ -326,7 +324,7 @@ git commit -m "add navbar to code base"
 
 ---
 
-## 🔍 Git Graph After Commit to nav-bar
+## Git Graph After Commit to nav-bar
 
 Now the graph shows that `nav-bar` has progressed beyond `master`.
 
@@ -336,7 +334,7 @@ Now the graph shows that `nav-bar` has progressed beyond `master`.
 
 ---
 
-## 🔁 Switching to Master Branch
+## Switching to Master Branch
 
 Switched to master:
 ```bash
@@ -360,7 +358,7 @@ git commit -m "add hero section to the code base"
 
 ---
 
-## 🔍 Git Graph After Both Branches Have Commits
+## Git Graph After Both Branches Have Commits
 
 Now `master` has its own new commit, and so does `nav-bar`.  
 You can clearly see the diverged paths.
@@ -371,14 +369,14 @@ You can clearly see the diverged paths.
 
 ---
 
-## 🔁 Switching Between Branches Again
+## Switching Between Branches Again
 
 When I’m on `master`, I see only `hero.html`.  
 When I switch back to `nav-bar`, I don’t see `hero.html`, but I do see `navbar.html`.
 
 ---
 
-## 🔹 Git Log and HEAD
+## Git Log and HEAD
 
 `HEAD` shows the latest commit for the branch you’re currently on.
 
@@ -394,14 +392,14 @@ This is what it looked like for each branch.
 
 ---
 
-### 🧠 Side Note:
+### Side Note:
 
 `git switch branch-name` works just like `git checkout branch-name`.  
 But `switch` is newer and more readable.
 
 ---
 
-## 🔀 Git Merge
+## Git Merge
 
 I switched back to the `master` branch and merged the `nav-bar` branch:
 
@@ -424,7 +422,7 @@ git branch -d nav-bar
 
 ---
 
-## 🧠 Git Graph View After Merge
+## Git Graph View After Merge
 
 We can see the merge in Git Graph clearly now:
 
@@ -434,7 +432,7 @@ We can see the merge in Git Graph clearly now:
 
 ---
 
-## 🔁 Practicing Again with `footer` Branch
+## Practicing Again with `footer` Branch
 
 I created a new branch called `footer`, made some edits, and merged that too.
 
@@ -444,7 +442,7 @@ I created a new branch called `footer`, made some edits, and merged that too.
 
 ---
 
-## ⚔️ Git Conflict (Content Conflict)
+## Git Conflict (Content Conflict)
 
 I edited the same file (`index.html`) from both `master` and `footer` branches.
 
@@ -473,7 +471,7 @@ git merge footer
 
 ---
 
-## 🧩 Resolving Merge Conflicts
+## Resolving Merge Conflicts
 
 Here’s what the conflict looked like inside VS Code:
 
@@ -486,7 +484,7 @@ After editing and resolving the conflict manually, Git asked for a commit to fin
 
 ---
 
-## ✅ Git Graph After Conflict Resolution
+## Git Graph After Conflict Resolution
 
 Now we can see the new merge commit in Git Graph.
 
@@ -497,7 +495,7 @@ Now we can see the new merge commit in Git Graph.
 
 ---
 
-## 📊 Git Diff — Comparing File Changes
+## Git Diff, Comparing File Changes
 
 The `git diff` command shows what changed in a file:
 
@@ -523,7 +521,7 @@ I also used it on `footer.html` to see specific edits:
 
 ---
 
-## 🔍 Git Log + Specific Diff Between Commits
+## Git Log + Specific Diff Between Commits
 
 To view diff between specific commits, I ran:
 
@@ -623,7 +621,7 @@ git stash list
   <img width="802" alt="Pasted Graphic 51" src="https://github.com/user-attachments/assets/eba054bb-7244-4f1e-bd40-a181f066c7c8" />
 </p>
 
-## 🔄 Git Rebase
+## Git Rebase
 
 Git rebase is used to:
 
@@ -631,11 +629,11 @@ Git rebase is used to:
 - Reapply commits on top of another base tip
 - Avoid unnecessary merge commits
 
-📌 **Note**: Never rebase on `main` or `master`. Always do it from a feature or bugfix branch.
+**Note**: Never rebase on `main` or `master`. Always do it from a feature or bugfix branch.
 
 ---
 
-### 📌 Rebase Diagram
+### Rebase Diagram
 
 <p align="center">
   <img width="688" alt="Pasted Graphic 52" src="https://github.com/user-attachments/assets/1e3fc947-8a76-492e-a6bd-59882b52de56" />
@@ -645,7 +643,7 @@ Git rebase is used to:
 
 ---
 
-### ✅ Scenario Setup: Commits on master and bug branch
+### Scenario Setup: Commits on master and bug branch
 
 1. Made a commit on `master`: “update main website”
 2. Switched to `bug` and committed: “updat navbar”
@@ -657,7 +655,7 @@ Git rebase is used to:
 
 ---
 
-### 🔃 Merging master into bug (Before rebase)
+### Merging master into bug (Before rebase)
 
 - Switched to `bug`
 - Ran `git merge master`
@@ -673,7 +671,7 @@ Result:
 
 ---
 
-### 🔍 Git Graph Before Rebase
+### Git Graph Before Rebase
 
 <p align="center">
   <img width="894" alt="Pasted Graphic 55" src="https://github.com/user-attachments/assets/29224cde-8e17-49cd-a774-03147376b0b5" />
@@ -683,7 +681,7 @@ Result:
 
 ---
 
-### ⛏️ More Changes on bug and master
+### More Changes on bug and master
 
 - From `bug`, committed another fix
 - Switched to `master` again and added more changes
@@ -694,7 +692,7 @@ Result:
 
 ---
 
-### 🧹 Performing the Rebase
+### Performing the Rebase
 
 - Switched to `bug`
 - Ran:
@@ -712,7 +710,7 @@ Result:
 
 ---
 
-### 📈 Git Graph After Rebase
+### Git Graph After Rebase
 
 <p align="center">
   <img width="894" alt="Pasted Graphic 58" src="https://github.com/user-attachments/assets/09173880-180b-4204-b10c-f049eb3c8b79" />
@@ -722,12 +720,12 @@ Result:
 
 ---
 
-## 🔐 SSH Keys in GitHub
+## SSH Keys in GitHub
 
 SSH keys are like a secure, unique signature from your computer that says:
 > "Hey GitHub, it’s me! Let me push/pull without typing credentials."
 
-### ✨ Why use SSH keys?
+### Why use SSH keys?
 
 | 🔒 Reason             | ✅ Benefit                                |
 |----------------------|--------------------------------------------|
@@ -738,7 +736,7 @@ SSH keys are like a secure, unique signature from your computer that says:
 
 ---
 
-### ⚙️ Setting up SSH (Based on GitHub Docs)
+### Setting up SSH (Based on GitHub Docs)
 
 1. Generate SSH key:
    - [Generating SSH key guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
@@ -752,7 +750,7 @@ SSH keys are like a secure, unique signature from your computer that says:
 
 ---
 
-### 🚀 Pushing Code with SSH
+### Pushing Code with SSH
 
 Example commands:
 ```bash
@@ -766,7 +764,7 @@ git push -u origin master
 
 ---
 
-### 🔁 Git Remote Check
+### Git Remote Check
 
 ```bash
 git remote -v
@@ -778,7 +776,7 @@ git remote -v
 
 ---
 
-## 🧑‍💻 Quick Git Reference
+## Quick Git Reference
 
 | Command              | Purpose                                                              |
 |----------------------|----------------------------------------------------------------------|
@@ -788,7 +786,7 @@ git remote -v
 
 ---
 
-## 🤝 For Open Source Contributions
+## For Open Source Contributions
 
 1. Fork repo
 2. Clone forked repo
